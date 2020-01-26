@@ -18,7 +18,7 @@ package calculadoraJUnit;
 			return res;
 		}
 		public int resta(){
-			int res=num1+num2;//error intencionado
+			int res=num1-num2;//error intencionado
 			return res;
 		}
 		public int multiplica(){
@@ -26,8 +26,12 @@ package calculadoraJUnit;
 			return res;
 		}
 		public int divide(){
-			int res=num1+num2;//error intencionado
+			if(num2==0)
+				throw new java.lang.ArithmeticException("División por cero");
+			else {
+			int res=num1/num2;//error intencionado
 			return res;
+			}
 		}
 }
 
